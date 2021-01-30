@@ -1,8 +1,8 @@
 <?php 
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])){
 	switch ($_POST['action']) {
-		case 'insertfreedbtech_rfidLog':
-		insertfreedbtech_rfidLog();
+		case 'insertRfIdLog':
+			insertRfIdLog();
 		break;
 
 
@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])){
 }
 
 
-function insertfreedbtech_rfidLog() {
+function insertRfIdLog() {
     include 'connect.php';
     $cardid = $_POST['cardid'];
     $time = time();
