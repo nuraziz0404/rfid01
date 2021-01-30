@@ -12,7 +12,7 @@ if (!$conn) {
 $t = "admin";
 $f = "id";
 
-$sql = "DELETE FROM $t WHERE $f = $id";
+$sql = "DELETE FROM $t WHERE $f = '$id'";
 
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);
