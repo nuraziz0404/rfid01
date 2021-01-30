@@ -1,6 +1,6 @@
 <?php 
-if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])){
-	switch ($_POST['action']) {
+if($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["action"])){
+	switch ($_GET['action']) {
 		case 'insertRfIdLog':
 			insertRfIdLog();
 		break;
