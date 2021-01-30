@@ -19,7 +19,7 @@ $reset = "ALTER TABLE $t ADD $f INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST";
 
 if (mysqli_query($conn, $sql) && mysqli_query($conn, $set) && mysqli_query($conn, $reset)) {
     mysqli_close($conn);
-    header('Location: viewlogs.php'); //If book.php is your main page where you list your all records
+    header('Location: index.php'); //If book.php is your main page where you list your all records
     exit;
 } else {
     echo "Error deleting record";
