@@ -1,6 +1,6 @@
 <?php 
-if($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["action"])){
-	switch ($_GET['action']) {
+if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])){
+	switch ($_POST['action']) {
 		case 'insertRfIdLog':
 			insertRfIdLog();
 		break;
@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["action"])){
 
 function insertRfIdLog() {
     include 'connect.php';
-    $cardid = $_GET['cardid'];
+    $cardid = $_POST['cardid'];
     $time = time();
 	
     $stmt = $conn->prepare("INSERT INTO `tbllogs`(`cardid`, `logdate`) VALUES (:card, :dt)");
