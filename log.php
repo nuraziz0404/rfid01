@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])){
 
 function insertRfIdLog() {
     include 'connect.php';
-    $cardid = $_POST['cardid'];
+    $cardid = $_GET['cardid'];
     $time = time();
 	
     $stmt = $conn->prepare("INSERT INTO `tbllogs`(`cardid`, `logdate`) VALUES (:card, :dt)");
